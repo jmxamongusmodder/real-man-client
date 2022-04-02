@@ -5,9 +5,7 @@
   "mixins": [
   ],
   "client": [
-  "StarterMixin",
-  "WorldMixin",
-  "ChatScreenMixin"
+  "StarterMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -12,8 +12,7 @@ import net.minecraft.client.gui.widget.TextFieldWidget;
 import net.minecraft.text.Text;
 
 @Mixin(ChatScreen.class)
-public class ChatScreenMixin extends Screen
-{
+public class ChatScreenMixin {
 	@Shadow
 	protected TextFieldWidget chatField;
 	

@@ -31,10 +31,6 @@ public abstract class WorldMixin {
 	@Override
 	public float getSkyAngle(float tickDelta)
 	{
-		long timeOfDay =
-			noWeatherHack.isTimeChanged() ? noWeatherHack.getChangedTime()
-				: getLevelProperties().getTimeOfDay();
-		
 		return getDimension().getSkyAngle(timeOfDay);
 	}
 	
@@ -48,12 +44,5 @@ public abstract class WorldMixin {
 	public List<BlockEntityTickInvoker> getBlockEntityTickers()
 	{
 		return blockEntityTickers;
-	}
-	
-	@Override
-	public Stream<VoxelShape> getBlockCollisionsStream(@Nullable Entity entity,
-		Box box)
-	{
-		return StreamSupport.stream(getBlockCollisions(entity, box).spliterator(), false);
 	}
 }
